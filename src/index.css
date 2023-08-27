@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.img--navbar-log-lm {
+  height: 60px;
+  width: 120px;
+  border-radius: 0px;
+}
+
+.muibox-override {
+  justify-content:center;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+}
+
+.muibox-override > a:link {
+  text-decoration: none;
+}

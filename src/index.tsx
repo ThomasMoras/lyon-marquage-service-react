@@ -3,6 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 
 import {
   Routes,
@@ -20,49 +24,58 @@ import Collection from "./pages/collection";
 import Objets_Publicitaire from "./pages/objet_publicitaire";
 import Enseigne from "./pages/enseigne";
 import Broderie from "./pages/broderie";
+import Root from "./pages/root";
+import Contact from "./pages/contact";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Root />,
     errorElement: <ErrorPage />,
     // loader: homeLoader,
     // action: homeAction,
-  },
-  {
-    path: "/home",
-    element: <Home />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/serigraphie",
-    element: <Serigraphie />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/broderie",
-    element: <Broderie />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/enseigne",
-    element: <Enseigne />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/objet-publicitaire",
-    element: <Objets_Publicitaire />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/collections",
-    element: <Collection />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/realisations",
-    element: <Realisation />,
-    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/home",
+        element: <Home />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/serigraphie",
+        element: <Serigraphie />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/broderie",
+        element: <Broderie />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/enseigne",
+        element: <Enseigne />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/objet-publicitaire",
+        element: <Objets_Publicitaire />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/collections",
+        element: <Collection />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/realisations",
+        element: <Realisation />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+        errorElement: <ErrorPage />,
+      },
+    ],
   },
 ]);
 
